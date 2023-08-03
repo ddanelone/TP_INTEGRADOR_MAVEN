@@ -49,7 +49,8 @@ CREATE TABLE ordenes_provision (
   fecha_orden DATE,
   tiempo_maximo INT,
   estado VARCHAR(20),
-  FOREIGN KEY (sucursal_origen_id) REFERENCES sucursales(id),
+  peso_total DECIMAL (10,2),
+  camino_seleccionado_id INT,
   FOREIGN KEY (sucursal_destino_id) REFERENCES sucursales(id)
 );
 
