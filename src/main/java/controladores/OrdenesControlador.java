@@ -70,6 +70,10 @@ public class OrdenesControlador implements ActionListener, MouseListener, KeyLis
     //Instanciamos el modelo de caminos  y su clase Dao
     CaminoSeleccionado caminoSel = new CaminoSeleccionado();
     CaminoSeleccionadoDao caminoSelDao = new CaminoSeleccionadoDao();
+    
+    public OrdenesControlador() {
+    
+    };
 
     public OrdenesControlador(Ordenes orden, OrdenesDao ordenDao, SystemView vista) {
         this.orden = orden;
@@ -720,7 +724,7 @@ public class OrdenesControlador implements ActionListener, MouseListener, KeyLis
     }
 
     // Método para calcular el tiempo de tránsito entre los elementos de una sublista
-    private int calcularTiempoSublista(List<Integer> caminoEntero) {
+    public int calcularTiempoSublista(List<Integer> caminoEntero) {
         int tiempoSublista = 0;
         for (int i = 0; i < caminoEntero.size() - 1; i++) {
             int origenId = caminoEntero.get(i);
@@ -736,7 +740,7 @@ public class OrdenesControlador implements ActionListener, MouseListener, KeyLis
     }
 
     // Método para obtener el tiempo de tránsito entre dos sucursales
-    private int obtenerTiempoTransito(int origenId, int destinoId) {
+    public int obtenerTiempoTransito(int origenId, int destinoId) {
         List<Caminos> lista = caminoDao.listaCaminosQuery("");
         return lista.stream()
                 .filter(camino -> camino.getOrigenId() == origenId && camino.getDestinoId() == destinoId)
