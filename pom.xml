@@ -1,45 +1,56 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>frsf.isi.died</groupId>
-  <artifactId>tp-integrado</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
-  <name>Trabajo practico integrador</name>
-  <description>Trabajo practico integrador. Desarrollado en Netbeans.</description>
-  <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-        <exec.mainClass>com.dw.tpfinal.TpFinal</exec.mainClass>
-    </properties>
-    
-    <repositories>
-        <repository>
-            <id>netbeans</id>
-            <name>NetBeans</name>
-            <url>https://netbeans.apidesign.org/maven2/</url>
-        </repository>
-    </repositories>    
-    <!-- https://mvnrepository.com/artifact/org.netbeans.external/AbsoluteLayout -->
-    <dependencies>
-        <!-- https://mvnrepository.com/artifact/org.netbeans.external/AbsoluteLayout -->
-        <dependency>
-            <groupId>org.netbeans.external</groupId>
-            <artifactId>AbsoluteLayout</artifactId>
-            <version>RELEASE180</version>
-        </dependency>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>frsf.isi.died</groupId>
+	<artifactId>tp-integrado</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<name>Trabajo practico integrador</name>
+	<description>Trabajo practico integrador. Desarrollado en Netbeans.</description>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
+		<exec.mainClass>com.dw.tpfinal.TpFinal</exec.mainClass>
+	</properties>
 
-        <!-- https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
-        <dependency>
-            <groupId>com.mysql</groupId>
-            <artifactId>mysql-connector-j</artifactId>
-            <version>8.1.0</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+	<repositories>
+		<repository>
+			<id>netbeans</id>
+			<name>NetBeans</name>
+			<url>https://netbeans.apidesign.org/maven2/</url>
+		</repository>
+	</repositories>
+	<!-- https://mvnrepository.com/artifact/org.netbeans.external/AbsoluteLayout -->
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.netbeans.external/AbsoluteLayout -->
 		<dependency>
-		    <groupId>org.junit.jupiter</groupId>
- 		    <artifactId>junit-jupiter-api</artifactId>
-    		<version>5.10.0</version>
-    		<scope>test</scope>
-		</dependency>		
-    </dependencies>  
+			<groupId>org.netbeans.external</groupId>
+			<artifactId>AbsoluteLayout</artifactId>
+			<version>RELEASE180</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
+		<dependency>
+			<groupId>com.mysql</groupId>
+			<artifactId>mysql-connector-j</artifactId>
+			<version>8.1.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<version>5.10.0</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.mockito/mockito-core -->
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<version>5.4.0</version>
+			<scope>test</scope>
+		</dependency>
+
+
+	</dependencies>
 </project>

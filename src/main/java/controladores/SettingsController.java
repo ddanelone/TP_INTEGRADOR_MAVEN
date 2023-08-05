@@ -7,17 +7,17 @@ import java.awt.event.MouseListener;
 
 public class SettingsController implements MouseListener {
 
-     private SystemView views;
+     private SystemView vista;
      
-     public SettingsController(SystemView views) {
-         this.views = views;
-         this.views.jLabelSucursales.addMouseListener(this);
-         this.views.jLabelElectrodomesticos.addMouseListener(this);
-         this.views.jLabelStock.addMouseListener(this);
-         this.views.jLabelCaminos.addMouseListener(this);
-         this.views.jLabelOrdenes.addMouseListener(this);
-         this.views.jLabelAdministracion.addMouseListener(this);
-         this.views.jLabelInformes.addMouseListener(this);
+     public SettingsController(SystemView vista) {
+         this.vista = vista;
+         this.vista.jLabelSucursales.addMouseListener(this);
+         this.vista.jLabelElectrodomesticos.addMouseListener(this);
+         this.vista.jLabelStock.addMouseListener(this);
+         this.vista.jLabelCaminos.addMouseListener(this);
+         this.vista.jLabelOrdenes.addMouseListener(this);
+         this.vista.jLabelAdministracion.addMouseListener(this);
+         this.vista.jLabelInformes.addMouseListener(this);
 
      }
      
@@ -36,40 +36,40 @@ public class SettingsController implements MouseListener {
 
     @Override
     public void mouseEntered(MouseEvent e) {
-        if(e.getSource()==views.jLabelSucursales) {
-            views.jPanelSucursales.setBackground(new Color(152,202,63));
-        } else if(e.getSource()== views.jLabelElectrodomesticos) {
-            views.jPanelElectrodomesticos.setBackground(new Color(152,202,63));
-        } else if(e.getSource()== views.jLabelStock) {
-            views.jPanelStock.setBackground(new Color(152,202,63));    
-        } else if(e.getSource()== views.jLabelCaminos) {
-            views.jPanelCaminos.setBackground(new Color(152,202,63));
-        } else if(e.getSource()== views.jLabelOrdenes) {
-            views.jPanelOrdenes.setBackground(new Color(152,202,63));
-        } else if(e.getSource()== views.jLabelAdministracion) {
-            views.jPanelAdministracion.setBackground(new Color(152,202,63));
-        } else if(e.getSource()== views.jLabelInformes) {
-            views.jPanelInformes.setBackground(new Color(152,202,63));
+        if(e.getSource()==vista.jLabelSucursales) {
+            vista.jPanelSucursales.setBackground(new Color(152,202,63));
+        } else if(e.getSource()== vista.jLabelElectrodomesticos) {
+            vista.jPanelElectrodomesticos.setBackground(new Color(152,202,63));
+        } else if(e.getSource()== vista.jLabelStock) {
+            vista.jPanelStock.setBackground(new Color(152,202,63));    
+        } else if(e.getSource()== vista.jLabelCaminos) {
+            vista.jPanelCaminos.setBackground(new Color(152,202,63));
+        } else if(e.getSource()== vista.jLabelOrdenes) {
+            vista.jPanelOrdenes.setBackground(new Color(152,202,63));
+        } else if(e.getSource()== vista.jLabelAdministracion) {
+            vista.jPanelAdministracion.setBackground(new Color(152,202,63));
+        } else if(e.getSource()== vista.jLabelInformes) {
+            vista.jPanelInformes.setBackground(new Color(152,202,63));
         }
     
     }
 
     @Override
     public void mouseExited(MouseEvent e) {
-        if(e.getSource()==views.jLabelSucursales) {
-            views.jPanelSucursales.setBackground(new Color(18,45,61)); //[18,45,61]
-        } else if(e.getSource()== views.jLabelElectrodomesticos) {
-            views.jPanelElectrodomesticos.setBackground(new Color(18,45,61));
-        } else if(e.getSource()== views.jLabelStock) {
-            views.jPanelStock.setBackground(new Color(18,45,61));
-        } else if(e.getSource()== views.jLabelCaminos) {
-            views.jPanelCaminos.setBackground(new Color(18,45,61));
-        } else if(e.getSource()== views.jLabelOrdenes) {
-            views.jPanelOrdenes.setBackground(new Color(18,45,61));
-        } else if(e.getSource()== views.jLabelAdministracion) {
-            views.jPanelAdministracion.setBackground(new Color(18,45,61));
-        } else if(e.getSource()== views.jLabelInformes) {
-            views.jPanelInformes.setBackground(new Color(18,45,61));
+        if(e.getSource()==vista.jLabelSucursales) {
+            vista.jPanelSucursales.setBackground(new Color(18,45,61)); //[18,45,61]
+        } else if(e.getSource()== vista.jLabelElectrodomesticos) {
+            vista.jPanelElectrodomesticos.setBackground(new Color(18,45,61));
+        } else if(e.getSource()== vista.jLabelStock) {
+            vista.jPanelStock.setBackground(new Color(18,45,61));
+        } else if(e.getSource()== vista.jLabelCaminos) {
+            vista.jPanelCaminos.setBackground(new Color(18,45,61));
+        } else if(e.getSource()== vista.jLabelOrdenes) {
+            vista.jPanelOrdenes.setBackground(new Color(18,45,61));
+        } else if(e.getSource()== vista.jLabelAdministracion) {
+            vista.jPanelAdministracion.setBackground(new Color(18,45,61));
+        } else if(e.getSource()== vista.jLabelInformes) {
+            vista.jPanelInformes.setBackground(new Color(18,45,61));
         }
     }
 }
