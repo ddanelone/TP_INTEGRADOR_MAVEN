@@ -19,7 +19,6 @@ import modelos.Sucursales;
 import modelos.SucursalesDao;
 import modelos.Vertex;
 import vistas.SystemView;
-import vistas.VerGrafoDinamico;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -33,6 +32,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import vistas.Grafo;
 
 public class OrdenesControlador implements ActionListener, MouseListener, KeyListener {
 
@@ -249,9 +249,8 @@ public class OrdenesControlador implements ActionListener, MouseListener, KeyLis
             limpiarTablas(modeloCaminos);
             limpiarCampos();
         } else if (e.getSource() == vista.btn_ordenes_ver_grafo) {
-            VerGrafoDinamico verGrafoDinamico = new VerGrafoDinamico();
-            verGrafoDinamico.setVisible(true);
-        }
+            Grafo grafoDinamico = new Grafo();
+            }
     }
 
     @Override
