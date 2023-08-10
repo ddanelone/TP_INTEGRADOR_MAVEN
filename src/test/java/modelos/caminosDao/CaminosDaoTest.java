@@ -141,25 +141,21 @@ class CaminosDaoTest {
     }
 
 	@Test
-    void testModificarCaminoEstadoEstadoQuery() throws SQLException {
-        // Configuramos el comportamiento del mock de ConnectionMySQL para que devuelva el mock de Connection
-        when(cnMock.getConnection()).thenReturn(connMock);
+	void testModificarCaminoEstadoEstadoQuery() throws SQLException {
+	    // Arrange: Configuración del escenario
+	    when(cnMock.getConnection()).thenReturn(connMock);
+	    when(connMock.prepareStatement(anyString())).thenReturn(pstMock);
+	    when(pstMock.execute()).thenReturn(true);
 
-        // Configuramos el comportamiento del mock de Connection.prepareStatement para que devuelva el mock de PreparedStatement
-        when(connMock.prepareStatement(anyString())).thenReturn(pstMock);
+	    Caminos camino = new Caminos(1, 2, 3, 100, 120, true, "Observaciones");
 
-        // Configuramos el comportamiento del mock de PreparedStatement para que devuelva true
-        when(pstMock.execute()).thenReturn(true);
+	    // Act: Llamada al método que queremos probar
+	    boolean resultado = caminoDao.modificarCaminoEstadoEstadoQuery(camino);
 
-        // Crear un objeto Caminos con los datos necesarios para el test
-        Caminos camino = new Caminos(1, 2, 3, 100, 120, true, "Observaciones");
+	    // Assert: Verificación del resultado esperado
+	    assertTrue(resultado, "Se esperaba que el método retorne 'true'");
+	}
 
-        // Llamamos al método que queremos probar
-        boolean resultado = caminoDao.modificarCaminoEstadoEstadoQuery(camino);
-
-        // Verificamos el resultado esperado
-        assertTrue(resultado, "Se esperaba que el método retorne 'true'");
-    }
 
 	@Test
     void testBorrarCaminoQuery() throws SQLException {

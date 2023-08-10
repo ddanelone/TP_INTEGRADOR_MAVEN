@@ -15,6 +15,18 @@ public class CaminosDao {
     PreparedStatement pst;
     ResultSet rs;
     
+    /*
+    private static CaminosDao _INSTANCE;
+    
+    private CaminosDao() {};
+    
+    public static CaminosDao getInstancia() {
+    	if(_INSTANCE == null) {
+    		_INSTANCE = new CaminosDao();
+    	} 
+    	return _INSTANCE;
+    } */
+    
     //Variables para enviear datos entre interfaces
     public static int id_camino = 0;
     public static int origenId_camino=0;

@@ -30,7 +30,7 @@ public class MaxEnvioCalculator {
             residualGraph.get(edge.getOrigin().getValue() - 1).set(edge.getEnd().getValue() - 1, edge.getValue());
         }
         
-        // Realizar BFS para encontrar caminos aumentantes y actualizar el flujo máximo
+        // Realizar BFS -anchura- para encontrar caminos aumentantes y actualizar el flujo máximo
         int[] parent = new int[graph.getVertexCount()];
         while (true) {
             int minCapacity = findAugmentingPath(residualGraph, parent);

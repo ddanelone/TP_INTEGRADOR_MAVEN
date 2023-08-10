@@ -72,7 +72,7 @@ public class StockControlador implements ActionListener, MouseListener, KeyListe
         DefaultComboBoxModel<String> modeloCombo = new DefaultComboBoxModel<>(nombresSucursales.toArray(new String[0]));
         vista.cmb_stock_sucursal.setModel(modeloCombo);
 
-        //Asigno mal map nombresElectro todos los electrodomesticos, utilizando clave y nomre
+        //Asigno al map nombresElectro todos los electrodomesticos, utilizando clave y nombre
         for (Electrodomesticos electro : listaElectro) {
             nombresElectro.put(electro.getId(), electro.getNombre());
         }

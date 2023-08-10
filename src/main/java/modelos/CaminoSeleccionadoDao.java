@@ -28,7 +28,7 @@ public class CaminoSeleccionadoDao {
     //Método para registrar un camino;
     public boolean registrarCaminoQuery(CaminoSeleccionado camino) {
         String query = "INSERT INTO caminos_seleccionados (id, orden_provision_id, sucursal_origen_id, sucursal_destino_id, camino, tiempo_estimado) VALUES(?,?,?,?,?,?)";
-
+        
         try {
             conn = cn.getConnection();
             pst = conn.prepareStatement(query);

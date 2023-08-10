@@ -63,7 +63,7 @@ public class OrdenesControlador implements ActionListener, MouseListener, KeyLis
     ProductoCantidadDao produCantDao = new ProductoCantidadDao();
     //Instanciamos el modelo de Caminos;
     Caminos camino = new Caminos();
-    CaminosDao caminoDao = new CaminosDao();
+    CaminosDao caminoDao= new CaminosDao();
     //Instanciar el modelo de Stock
     Stock stock = new Stock();
     StockDao stockDao = new StockDao();
@@ -453,7 +453,7 @@ public class OrdenesControlador implements ActionListener, MouseListener, KeyLis
         vista.tabla_ordenes_productos.setModel(tablaModelo());
     }
 
-    //Método pararecuperar y mostrar en pantalla todas las ordenes cargadas. 
+    //Método para recuperar y mostrar en pantalla todas las ordenes cargadas. 
     public void listarTodasLasOrdenes() {
         List<Ordenes> lista = ordenDao.listaOrdenesQuery("");
         modeloOrdenes = (DefaultTableModel) vista.tabla_ordenes.getModel();
@@ -690,7 +690,7 @@ public class OrdenesControlador implements ActionListener, MouseListener, KeyLis
     private DefaultTableModel tablaModeloCaminoAsignado(CaminoSeleccionado camino) {
         modeloCaminos = (DefaultTableModel) vista.tabla_ordenes_caminos.getModel();
         Object[] col = new Object[4];
-        col[0] = camino.getSucursal_destino_id();
+        col[0] = camino.getSucursal_origen_id();
         col[1] = camino.getCamino();
         col[2] = camino.getSucursal_destino_id();
         col[3] = camino.getTiempo();

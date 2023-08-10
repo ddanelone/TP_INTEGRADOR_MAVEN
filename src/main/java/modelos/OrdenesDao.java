@@ -110,7 +110,7 @@ public class OrdenesDao {
         return lista_ordenes;
     }
 
-    //Método para listar órdenes de provisión
+    //Método para listar detalles de órdenes de provisión
     public List<Ordenes> listarDetallesOrdenesQuery(int id_orden) {
         List<Ordenes> lista_ordenes = new ArrayList<>();
         String query = "SELECT op.id AS orden_id, op.sucursal_origen_id, op.sucursal_destino_id, op.fecha_orden, op.tiempo_maximo, op.estado,\n"

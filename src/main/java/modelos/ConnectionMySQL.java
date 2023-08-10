@@ -6,9 +6,10 @@ import java.sql.SQLException;
 
 public class ConnectionMySQL implements AutoCloseable {
     private String database_name = "died_tp";
-    private String user = "root";
+	private String user = "root";
     private String password = "root";
     private String url = "jdbc:mysql://localhost:8800/" + database_name;
+    //private String url = "jdbc:mysql://tp_died_mySQL/" + database_name;
     private Connection conn = null;
     
 
